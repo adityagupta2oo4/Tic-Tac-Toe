@@ -121,7 +121,7 @@ function checkWinner(currentPlayer){
         [6,7,8],
         [0,3,6],
         [1,4,7],
-        [2,6,8],
+        [2,5,8],
         [0,4,8],
         [2,4,6]
     ];
@@ -150,6 +150,9 @@ function showStatus(currentPlayer,hasWon = false){
     }
     else if(currentPlayer.name !== ""){
         status.textContent = `it's ${currentPlayer.name} turn`;
+    }
+    else if(currentPlayer.name!== "" && currentPlayer.positionsAcquired >3 && hasWon ===false){
+        status.textContent = "It's a Tie";
     }
     
 
